@@ -46,7 +46,7 @@ Binary_corr = cell(1,timesteps);      % prepare cell for corrected binary
 Area        = cell(timesteps,3);      % prepare array for area
 
 
-parfor k = 1:timesteps   %%% Install parallel ... for faster computation
+parfor k = 1:timesteps   % Install AddOn 'Parallel Computing Toolbox'
     disp(k)
     I1      = imread([Dir 'my_sample.tif'], k);
     I2      = I1-background; 
